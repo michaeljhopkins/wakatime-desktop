@@ -1,0 +1,7 @@
+$small-window-width: 550px;
+
+@mixin small-window {
+    @media(max-width: #{$small-window-width}) {
+        @content;
+    }
+}
