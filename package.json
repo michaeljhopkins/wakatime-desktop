@@ -4,7 +4,8 @@
   "description": "The Official Wakatime Desktop Application",
   "main": "main.js",
   "scripts": {
-    "preinstall": "make globals && bower install",
+    "preinstall": "make globals",
+    "postinstall": "bower install",
     "start": "gulp && electron .",
     "test": "node-inspector && electron --debug=5858 && ",
     "prepublish": "make"
@@ -35,7 +36,7 @@
     "lodash": "^3.9.3"
   },
   "dependencies": {
-    "electron-prebuilt": "^0.28.1"
+    "bower": "^1.4.1"
   },
   "jspm": {
     "directories": {},
