@@ -7,7 +7,7 @@
     "preinstall": "make globals",
     "postinstall": "bower install && jspm install",
     "start": "gulp && electron .",
-    "test": "node-inspector && electron --debug=5858 && "
+    "debug": "node-inspector && electron --debug=5858 && "
   },
   "repository": {
     "type": "git",
