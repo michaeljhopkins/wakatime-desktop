@@ -1,5 +1,5 @@
 System.config({
-  "baseURL": __dirname + "/",
+  "baseURL": "/Users/Stephen/Dropbox/Github/_Contributing/wakatime-desktop/node_modules/jspm/lib/config/",
   "transpiler": "babel",
   "babelOptions": {
     "optional": [

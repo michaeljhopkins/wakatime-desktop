@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "preinstall": "make globals",
-    "postinstall": "bower install",
+    "postinstall": "bower install && jspm install",
     "start": "gulp && electron .",
     "test": "node-inspector && electron --debug=5858 && ",
     "prepublish": "make"
