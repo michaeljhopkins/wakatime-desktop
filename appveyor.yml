@@ -1,0 +1,13 @@
+version: 1.0.0
+environment:
+    matrix:
+      - nodejs_version: '0.12'
+      - nodejs_version: '0.10'
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - set CI=true
+  - npm -g install npm@latest
+  - set PATH=%APPDATA%\npm;%PATH%
+  - npm install
+  - make windows
+  - make windows-64
