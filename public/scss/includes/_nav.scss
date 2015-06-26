@@ -1,0 +1,29 @@
+.navbar {
+    & > .container { height: 100%; }
+    & ul.navbar-list {
+        margin: 0;
+        height: 100%;
+        & li {
+            display: inline-block;
+            margin: 0 -5px 0 0;
+            height: 100%;
+            line-height: 55px;
+        }
+    }
+
+    .navbar-link {
+        display: block;
+        color: $white;
+        height: 100%;
+        padding: 0 15px;
+        background-color: $soft-black;
+        text-decoration: none;
+
+        &:hover, &.active {
+            background-color: $blue;
+        }
+    }
+
+    height: 55px;
+    background: $soft-black;
+}

@@ -3,20 +3,38 @@
   <head>
     <title>Electron Boilerplate: Hello World!</title>
     <!-- VENDOR CSS -->
-    <link rel="stylesheet" href="../public/vendor/skeleton/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="../public/vendor/skeleton/css/skeleton.css">
     <!-- VENDOR JS -->
-    <script src="../public/vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../public/vendor/jquery/dist/jquery.min.js"></script>
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
   </head>
   <body>
-    
-    <h1>Electron Boilerplate is alive!</h1>
+
+    <div class="fluid container">
+      <div class="navbar">
+        <div class="fluid container">
+          <ul class="navbar-list">
+            <li class="navbar-item"><a href="#" class="navbar-link active">Home</a></li>
+            <li class="navbar-item"><a href="javascript:window.open('http://www.wakatime.com')" class="navbar-link">Wakatime Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="twelve columns main-content">
+            <div class="three columns"><a href="#" class="plugin"><!-- plugin img --></a></div>
+            <div class="three columns"><a href="#" class="plugin"><!-- plugin img --></a></div>
+            <div class="three columns"><a href="#" class="plugin"><!-- plugin img --></a></div>
+            <div class="three columns"><a href="#" class="plugin"><!-- plugin img --></a></div>
+        </div>
+    </div>
 
     <!-- REQUIRED -->
-    <script src="../jspm_packages/system.js"></script>
-    <script src="../config.js"></script>
+    <script type="text/javascript" src="../jspm_packages/system.js"></script>
+    <script type="text/javascript" src="../config.js"></script>
     <!-- CUSTOM JS -->
-    <script src="../public/js/sample.js"></script>
+    <script type="text/javascript" src="../public/js/sample.js"></script>
   </body>
 </html>

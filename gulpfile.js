@@ -8,10 +8,8 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var plugins = require('gulp-load-plugins')();
 
-var sassRoot = 'public/scss';
-var cssRoot = 'public/css';
-var jsRoot = 'public/js';
-var jsnextRoot = 'public/js-next';
+var sassRoot = './public/scss';
+var cssRoot = './public/css';
 
 function handleError(err) {
   console.log(err.toString());
@@ -50,9 +48,6 @@ gulp.task('watch-sass', function() {
 // ############################################################################################
 // ############################################################################################
 
-gulp.task('default', ['build-sass'], function() {
-  gutil.log('Transposing Sass...');
-});
-
+gulp.task('default', ['build-sass']);
 gulp.task('clean', ['clean:styles']);
 gulp.task('watch', ['watch-sass']);
