@@ -1,7 +1,7 @@
 # wakatime-desktop
 The official Wakatime Desktop Application built in [Electron](https://github.com/atom/electron)
 
-![Travis Build](https://travis-ci.org/wakatime/wakatime-desktop.svg?branch=master)
+![Travis Build](https://travis-ci.org/wakatime/wakatime-desktop.svg?branch=master) [![Build status](https://ci.appveyor.com/api/projects/status/yhy9dtbju3eu6dwq?svg=true)](https://ci.appveyor.com/project/Stephn-R/wakatime-desktop)
 
 ### Installation:
 
