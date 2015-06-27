@@ -1,15 +1,17 @@
 'use strict';
 
 // Non Gulp npm modules
-var del = require('del');
+import del from 'del';
 
 // Gulp Modules
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var plugins = require('gulp-load-plugins')();
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import gulpLoadPlugins from 'gulp-load-plugins';
 
-var sassRoot = './public/scss';
-var cssRoot = './public/css';
+const $ = gulpLoadPlugins();
+
+const sassRoot = './public/scss';
+const cssRoot = './public/css';
 
 function handleError(err) {
   console.log(err.toString());
@@ -18,30 +20,30 @@ function handleError(err) {
 // ############################################################################################
 // ############################################################################################
 
-gulp.task('clean:styles', function(cb) {
+gulp.task('clean:styles', (cb) => {
   del([
     '**/.sass-cache/**',
   ], cb);
 });
 
-gulp.task('build-sass', function() {
+gulp.task('build-sass', () => {
   return gulp.src(sassRoot+'/*.scss')
-    .pipe(plugins.plumber())
-    .pipe(plugins.notify('Compile Sass File: <%= file.relative %>...'))
-    .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.autoprefixer('last 10 versions'))
-    .pipe(plugins.sass({
+    .pipe($.plumber())
+    .pipe($.notify('Compile Sass File: <%= file.relative %>...'))
+    .pipe($.sourcemaps.init())
+    .pipe($.autoprefixer('last 10 versions'))
+    .pipe($.sass({
       style: 'compressed'
     })).on('error', handleError)
-    .pipe(plugins.sourcemaps.write())
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest(cssRoot));
 });
 
 // ############################################################################################
 // ############################################################################################
 
-gulp.task('watch-sass', function() {
-  plugins.notify('Sass Stream is Active...');
+gulp.task('watch-sass', () => {
+  $.notify('Sass Stream is Active...');
   gulp.watch(sassRoot+'/**/*.scss', ['build-sass']);
 });
 

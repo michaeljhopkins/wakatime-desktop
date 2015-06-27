@@ -3,9 +3,11 @@
   <head>
     <title>Electron Boilerplate: Hello World!</title>
     <!-- VENDOR CSS -->
-    <link rel="stylesheet" type="text/css" href="../public/vendor/skeleton/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/skeleton/css/skeleton.css">
     <!-- VENDOR JS -->
     <script type="text/javascript" src="../public/vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../public/vendor/react/react.min.js"></script>
+    <script type="text/javascript" src="../public/vendor/react/JSXTransformer.js"></script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
   </head>
@@ -31,10 +33,15 @@
         </div>
     </div>
 
+    <div class="container">
+        <div id="example"></div>
+    </div>
+
     <!-- REQUIRED -->
     <script type="text/javascript" src="../jspm_packages/system.js"></script>
     <script type="text/javascript" src="../config.js"></script>
     <!-- CUSTOM JS -->
     <script type="text/javascript" src="../public/js/sample.js"></script>
+    <script type="text/jsx" src="../public/app/home/home.jsx"></script>
   </body>
 </html>
