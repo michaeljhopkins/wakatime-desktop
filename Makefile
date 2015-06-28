@@ -10,6 +10,7 @@ globals:
 	npm install -g node-inspector
 	npm install -g jspm
 	npm install -g gulp
+	npm install -g jest-cli
 
 clean-apps:
 	rm -rf dist && mkdir dist

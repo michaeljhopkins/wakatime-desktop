@@ -41,6 +41,7 @@ gulp.task('build-sass', () => {
 
 gulp.task('build-jsx', function() {
   return gulp.src(jsxRoot+'/**/*.jsx')
+    .pipe(plugins.notify('Building React files into ES6 compatible JS'))
     .pipe(plugins.browserify({
       transform: ['babelify']
     }))
@@ -49,6 +50,8 @@ gulp.task('build-jsx', function() {
     }))
     .pipe(gulp.dest(jsRoot));
 });
+
+
 
 // ############################################################################################
 // ############################################################################################
