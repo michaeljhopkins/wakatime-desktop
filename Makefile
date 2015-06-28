@@ -8,9 +8,10 @@ globals:
 	npm install -g electron-prebuilt
 	npm install -g electron-packager
 	npm install -g node-inspector
+	npm install -g jest-cli
+	npm install -g bower
 	npm install -g jspm
 	npm install -g gulp
-	npm install -g jest-cli
 
 clean-apps:
 	rm -rf dist && mkdir dist

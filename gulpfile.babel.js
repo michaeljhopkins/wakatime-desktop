@@ -39,19 +39,7 @@ gulp.task('build-sass', () => {
     .pipe(gulp.dest(cssRoot));
 });
 
-gulp.task('build-jsx', function() {
-  return gulp.src(jsxRoot+'/**/*.jsx')
-    .pipe(plugins.notify('Building React files into ES6 compatible JS'))
-    .pipe(plugins.browserify({
-      transform: ['babelify']
-    }))
-    .pipe(plugins.rename(function(path) {
-      path.extname = ".js";
-    }))
-    .pipe(gulp.dest(jsRoot));
-});
-
-
+// Add test runner and coverage
 
 // ############################################################################################
 // ############################################################################################
@@ -64,6 +52,6 @@ gulp.task('watch-sass', () => {
 // ############################################################################################
 // ############################################################################################
 
-gulp.task('default', ['build-sass', 'build-jsx']);
+gulp.task('default', ['build-sass']);
 gulp.task('clean', ['clean:styles']);
 gulp.task('watch', ['watch-sass']);

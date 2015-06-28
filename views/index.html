@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="homeApp">
   <head>
     <title>Electron Boilerplate: Hello World!</title>
     <!-- VENDOR CSS -->
     <link rel="stylesheet" type="text/css" href="../dist/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../dist/css/skeleton.css">
     <!-- VENDOR JS -->
-    <!-- <script type="text/javascript" src="../src/vendor/react/react.min.js"></script> -->
-    <!-- <script type="text/javascript" src="../src/vendor/react/JSXTransformer.js"></script> -->
+    <script type="text/javascript" src="../dist/vendor/angularjs/angular.min.js"></script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="../dist/css/style.css">
   </head>
-  <body>
+  <body ng-controller="homeController" ng-init="init()">
 
     <div class="fluid container">
       <div class="navbar">
@@ -24,10 +23,10 @@
       </div>
     </div>
 
-    <div id="PluginsGrid" class="container"></div>
-
     <div class="container">
-        <div id="example"></div>
+      <div class="three columns" ng-repeat="plugin in plugins">
+        <a href="{{ plugin.url }}"><img src="{{ plugin.src }}" alt="{{ plugin.alt }}"></a>
+      </div>
     </div>
 
     <!-- REQUIRED -->
@@ -35,6 +34,6 @@
     <script type="text/javascript" src="../config.js"></script>
     <!-- CUSTOM JS -->
     <script type="text/javascript" src="../dist/js/sample.js"></script>
-    <script type="text/jsx" src="../dist/js/home/home.js"></script>
+    <script type="text/javascript" src="../dist/js/home/home.js"></script>
   </body>
 </html>
