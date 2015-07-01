@@ -18,5 +18,5 @@
 	"jquery": true,
 	"mocha": true,
 	"node": true,
-	"predef": [ "import_stylesheet", "System" ]
+	"predef": [ "angular", ]
 }

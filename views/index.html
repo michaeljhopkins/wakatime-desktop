@@ -11,21 +11,11 @@
     <link rel="stylesheet" type="text/css" href="../dist/css/style.css">
   </head>
   <body ng-controller="homeController" ng-init="init()">
-
-    <div class="fluid container">
-      <div class="navbar">
-        <div class="fluid container">
-          <ul class="navbar-list">
-            <li class="navbar-item"><a href="#" class="navbar-link active">Home</a></li>
-            <li class="navbar-item"><a href="javascript:window.open('http://www.wakatime.com')" class="navbar-link">Wakatime Dashboard</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <nav-bar></nav-bar>
 
     <div class="container">
-      <div class="three columns" ng-repeat="plugin in plugins">
-        <a href="{{ plugin.url }}"><img src="{{ plugin.src }}" alt="{{ plugin.alt }}"></a>
+      <div class="two columns plugin" ng-repeat="plugin in plugins">
+        <a href="{{ plugin.url }}"><img src="../dist/images/plugins/{{ plugin.src }}" alt="{{ plugin.alt }}"></a>
       </div>
     </div>
 
@@ -34,6 +24,7 @@
     <script type="text/javascript" src="../config.js"></script>
     <!-- CUSTOM JS -->
     <script type="text/javascript" src="../dist/js/sample.js"></script>
+    <script type="text/javascript" src="../dist/js/nav/nav.js"></script>
     <script type="text/javascript" src="../dist/js/home/home.js"></script>
   </body>
 </html>
