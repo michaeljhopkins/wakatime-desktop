@@ -8,7 +8,7 @@
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../dist/js/nav/nav.html',
+            templateUrl: '../dist/js/app/nav/nav.html',
             scope: {},
             link: function(scope, element, attrs) {},
             controller: NavController

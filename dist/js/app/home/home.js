@@ -10,7 +10,7 @@
     $scope.plugins = [];
 
     $scope.init = function() {
-      $http.get('../dist/js/home/plugins.json').success(function(data) {
+      $http.get('../dist/js/app/home/plugins.json').success(function(data) {
         $scope.plugins = data;
       });
     };
