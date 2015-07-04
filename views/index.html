@@ -10,11 +10,11 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="../dist/css/style.css">
   </head>
-  <body ng-controller="homeController" ng-init="init()">
+  <body ng-controller="HomeController" ng-init="init()">
     <nav-bar></nav-bar>
 
-    <div class="container">
-      <div class="two columns plugin" ng-repeat="plugin in plugins">
+    <div class="container" ng-repeat="row in plugins">
+      <div class="two columns plugin" ng-repeat="plugin in row">
         <a href="{{ plugin.url }}"><img src="../dist/images/plugins/{{ plugin.src }}" alt="{{ plugin.alt }}"></a>
       </div>
     </div>
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../config.js"></script>
     <!-- CUSTOM JS -->
     <script type="text/javascript" src="../dist/js/sample.js"></script>
-    <script type="text/javascript" src="../dist/js/nav/nav.js"></script>
-    <script type="text/javascript" src="../dist/js/home/home.js"></script>
+    <script type="text/javascript" src="../dist/js/app/nav/nav.js"></script>
+    <script type="text/javascript" src="../dist/js/app/home/home.js"></script>
   </body>
 </html>
