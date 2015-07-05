@@ -13,9 +13,15 @@
   <body ng-controller="HomeController" ng-init="init()">
     <nav-bar></nav-bar>
 
-    <div class="container" ng-repeat="row in plugins">
-      <div class="two columns plugin" ng-repeat="plugin in row">
-        <a href="{{ plugin.url }}"><img src="../dist/images/plugins/{{ plugin.src }}" alt="{{ plugin.alt }}"></a>
+    <div class="container" ng-repeat="plugin in plugins">
+      <div class="twelve columns plugin">
+        <div class="left">
+          <a href="{{ plugin.url }}">
+            <img src="../dist/images/plugins/{{ plugin.src }}" alt="{{ plugin.alt }}">
+            <span class="badge good"></span>
+            <span class="status">Status: Active</span>
+          </a>
+        </div>
       </div>
     </div>
 
