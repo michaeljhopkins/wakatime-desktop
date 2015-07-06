@@ -8,7 +8,8 @@
     "start": "gulp && electron .",
     "postinstall": "bower install",
     "debug": "node-inspector && electron --debug=5858 && ",
-    "test": "karma start"
+    "test": "karma start --single-run",
+    "dev": "karma start"
   },
   "repository": {
     "type": "git",
