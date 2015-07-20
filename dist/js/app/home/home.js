@@ -1,16 +1,17 @@
 (function() {
   'use strict';
 
-  var homeApp = angular.module('homeApp', [
-    'nav'
-  ])
-  .controller('HomeController', ['$scope', '$http', HomeController]);
+  angular.module('homeApp', [
+    'nav',
+    'common'
+  ]).
+  controller('HomeController', ['$scope', '$http', 'CommonService', HomeController]);
 
-  function HomeController($scope, $http) {
+  function HomeController($scope, $http, CommonService) {
     $scope.plugins = [];
 
     $scope.init = function() {
-      $http.get('../dist/js/app/home/plugins.json').success(function(data) {
+      CommonService.getJSON('../dist/js/app/home/plugins.json').success(function(data) {
         $scope.plugins = data;
       });
     };

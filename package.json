@@ -35,7 +35,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.1",
+    "gulp-sass": "^2.0.3",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.5",
     "karma": "^0.12.37",
@@ -57,6 +57,8 @@
     }
   },
   "dependencies": {
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "pwuid": "^1.0.2",
+    "whoami-exec": "^1.0.0"
   }
 }
