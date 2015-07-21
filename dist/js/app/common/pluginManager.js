@@ -39,7 +39,7 @@
         function() {},
         // Mac
         function() {
-          
+
         },
         // Linux
         function() {}

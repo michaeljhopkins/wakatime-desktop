@@ -5,13 +5,13 @@ OUTPUT_DIR=dist
 apps: windows windows-64 mac-64 linux linux-64
 
 globals:
-	npm install -g electron-prebuilt
-	npm install -g electron-packager
-	npm install -g node-inspector
-	npm install -g jest-cli
-	npm install -g bower
-	npm install -g jspm
-	npm install -g gulp
+	npm i -g electron-prebuilt
+	npm i -g electron-packager
+	npm i -g node-inspector
+	npm i -g jest-cli
+	npm i -g bower
+	npm i -g jspm
+	npm i -g gulp
 
 clean-apps:
 	rm -rf dist && mkdir dist
