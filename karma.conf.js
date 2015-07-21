@@ -30,8 +30,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'dist/js/app/**/*.js': ['babel'],
+      '__tests__/**/*[sS]pec.js': ['babel']
     },
 
+    babelPreprocessor: {
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -41,7 +45,8 @@ module.exports = function(config) {
     plugins: [
       'karma-jasmine',
       'karma-mocha-reporter',
-      'karma-phantomjs-launcher'
+      'karma-phantomjs-launcher',
+      'karma-babel-preprocessor'
     ],
 
     // web server port
