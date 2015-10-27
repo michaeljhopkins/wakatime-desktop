@@ -30,5 +30,5 @@ make windows
 make windows-64
 make mac-64
 make linux
-make linx-64
+make linux-64
 ```
